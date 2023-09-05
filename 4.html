@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .onbuttonclick
+        {
+        /* display:flex; */
+        padding:10px;
+        justify-content: center;
+         }
+         
+    </style>
+</head>
+<body>
+    <form onsubmit="validateAndSubmit(event)">
+        <h1>signup form</h1>
+        <label for="name">name:</label>
+        <input type="text" name="name" id="name"placeholder="minimum 3 character">
+       <br>
+        <label for="email">email</label>
+         <input type="email" name="email" id="email" placeholder="enter your email">
+         <br>
+         <label for="password">Password:</label>
+         <input type="password" name="password" id="placeholder" paceholder="minimum 8 character">
+         <br>
+         <button type="submit"id="submit">submit</button>
+ </form>
+ <script>
+    function validateAndSubmit(event)
+    {
+        event.preventDefault();
+        console.log("entered");
+        const name=document.getElementById("name");
+        const email=document.getElementById("email");
+        const password=document.geElementById("password");
+        if(name.value.length>=3 && password.value.length>=8)
+        {
+            
+            alert("form validation successfulle!!");
+        }
+            
+            else
+           {
+            alert("form validation failed");
+           }
+        }
+    
+
+
+ </script>
+</body>
+</html>

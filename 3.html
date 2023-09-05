@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>counter</h1>
+    <button onclick="increment()"> + </button></button>
+    <span id="count">0</span>
+    <button onclick="decrement()">- </button>
+      
+    <script> 
+    const count=document.getElementById("count");
+    function increment()
+    {
+        count.innerHTML=Number(count.innerHTML)+
+        1;
+
+
+    }
+    function decrement()
+    {
+        if(Number(count.innerHTML)>0)
+        {
+        count.innerHTML=Number(count.innerHTML)-1;
+        }
+        else
+        {
+            alert("counter is going beyond 0.");
+
+        }
+    }
+
+    </script>
+
+    
+</body>
+</html>
